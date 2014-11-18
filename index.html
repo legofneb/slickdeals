@@ -1,3 +1,9 @@
 #!/usr/bin/env node
 
-console.log("HelloWorld");
+var program = require('commander');
+// Implementing command line arguments later
+program
+  .version('0.1')
+  .parse(process.argv);
+
+
