@@ -7,6 +7,7 @@ program
   .parse(process.argv);
 
 var http = require('http');
+var sleep = require('sleep');
 
 var options = {
   host: 'slickdeals.net',
@@ -24,7 +25,7 @@ http.get(options, function (res) {
   res.on('end', function () {
     var $ = cheerio.load(body);
     
-    $.html();
+    sleep.sleep(1);
 
     $('.itemImageLink').each(function (i, element) {
       console.log($(this).attr('title'));
